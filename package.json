@@ -1,7 +1,7 @@
 {
-  "name": "html-loader",
-  "version": "0.4.3",
-  "author": "Tobias Koppers @sokra",
+  "name": "html-str-loader",
+  "version": "0.0.1",
+  "author": "guanyx",
   "description": "html loader module for webpack",
   "dependencies": {
     "es6-templates": "^0.2.2",
@@ -29,7 +29,7 @@
     "beautify": "beautify-rewrite lib/**/*.js hot/**/*.js bin/**/*.js benchmark/*.js test/*.js",
     "postcover": "npm run lint && npm run beautify-lint",
     "cover": "istanbul cover -x *.runtime.js node_modules/mocha/bin/_mocha",
-    "publish-patch": "npm run lint && npm run beautify-lint && mocha && npm version patch && git push && git push --tags && npm publish"
+    "publish-patch": "npm version patch && git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",

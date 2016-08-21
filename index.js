@@ -125,9 +125,9 @@ module.exports = function(content) {
 		content = JSON.stringify(content);
 	}
 	
- 	return "module.exports = " + content.replace(/xxxHTMLLINKxxx[0-9\.]+xxx/g, function(match) {
+ 	return JSON.parse(content.replace(/xxxHTMLLINKxxx[0-9\.]+xxx/g, function(match) {
 		if(!data[match]) return match;
 		return '" + require(' + JSON.stringify(loaderUtils.urlToRequest(data[match], root)) + ') + "';
-	}) + ";";
+	}) );
 
 }
